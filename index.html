@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 
 <head>
@@ -15,6 +10,17 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css.map" />
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .show {
+            display: block;
+        }
+    </style>
 </head>
 
 <body class="is-preload">
@@ -24,25 +30,26 @@
         <div class="inner">
             <a href="#" class="image avatar"><img src="images/me.jpg" alt="" /></a>
             <h1><strong>Hi, I'm Victor Silva</strong>, a Information System student <br /> very passionate with software development<br /></h1>
-        </div>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  Dropdown button
-			</button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
+            <br>
+            <div class="dropdown">
+                <button id="myBtn" class="btn btn-secondary dropdown-toggle">See more</button>
+                <div id="myDropdown" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#intro">Intro</a>
+                    <a class="dropdown-item" href="#academic">Formation</a>
+                    <a class="dropdown-item" href="#profexp">Experience</a>
+                    <a class="dropdown-item" href="#works">Works</a>
+                    <a class="dropdown-item" href="#aditional">Aditional</a>
+                    <a class="dropdown-item" href="#contact">Contact</a>
+                </div>
             </div>
         </div>
-
     </header>
 
     <!-- Main -->
     <div id="main">
 
         <!-- One - Introdução -->
-        <section id="one">
+        <section id="intro">
             <header class="major">
                 <h2>Olá, sou Victor Luan Silva<br/>
             </header>
@@ -53,8 +60,8 @@
         </section>
 
         <!-- Two - Formação academica -->
-        <section id="two">
-            <h2> Academic... / Formação Academica </h2>
+        <section id="academic">
+            <h2> Academic background / Formação Academica </h2>
             <div class="row">
                 <article class="col-6 col-12-xsmall work-item">
                     <a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
@@ -83,7 +90,7 @@
             </ul>
         </section>
         <!-- Three - Esperiência Profissional-->
-        <section id="three">
+        <section id="profexp">
             <h2>Professional Experience / Experiência Profissional</h2>
             <div class="row">
                 <article class="col-6 col-12-xsmall work-item">
@@ -112,7 +119,7 @@
             </ul>
         </section>
         <!-- Four -->
-        <section id="four">
+        <section id="works">
             <h2>Recent Work / Trabalhos recentes</h2>
             <div class="row">
                 <article class="col-6 col-12-xsmall work-item">
@@ -135,9 +142,8 @@
                 <li><a href="#" class="button">Full Portfolio</a></li>
             </ul>
         </section>
-
         <!-- Five -->
-        <section id="five">
+        <section id="aditional">
             <h2>Aditional Information / Informações Adicionais</h2>
             <div class="row">
                 <article class="col-6 col-12-xsmall work-item">
@@ -149,11 +155,6 @@
                     <a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
                     <h3>Licença de Motorista</h3>
                     <p>Categoria B.</p>
-                </article>
-                <article class="col-6 col-12-xsmall work-item">
-                    <a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-                    <h3>Tortor metus commodo</h3>
-                    <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
                 </article>
             </div>
             <ul class="actions">
@@ -521,13 +522,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <footer id="footer">
         <div class="inner">
             <ul class="icons">
-                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-                <li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+                <li><a href="victorluansilva@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                <li><a href="https://github.com/VictorLansil" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                <li><a href="https://www.linkedin.com/in/victor-luan-silva-8a524780/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
             </ul>
             <ul class="copyright">
-                <li>&copy; Untitled</li>
-                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li>&copy; VS</li>
+                <li>Design: modified from <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
         </div>
     </footer>
@@ -544,6 +545,17 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/popper.min.js"></script>
+    <script>
+        // Get the button, and when the user clicks on it, execute myFunction
+        document.getElementById("myBtn").onclick = function() {
+            myFunction()
+        };
+
+        /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+    </script>
 
 
 </body>
